@@ -2,6 +2,10 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: |
   This my Cfn template for EC2 with Security Group
 
+
+Parameters:
+  ParamName
+
 Resources:
   MyWebServer:
     Type: AWS::EC2::Instance
@@ -19,7 +23,7 @@ Resources:
           #! /bin/bash
           yum update -y
           yum install httpd -y
-          FOLDER=“https://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@raw.githubusercontent.com/q5211murat/101-kittens-carousel-static-website/main/static-web"
+          FOLDER=“https://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@raw.githubusercontent.com/q5211murat/101-kittens-carousel-static-website/main/static-web/index.html
           cd /var/www/html
           wget ${FOLDER}/index.html
           wget ${FOLDER}/cat0.jpg
