@@ -42,9 +42,9 @@ Resources:
           FromPort: 22
           ToPort: 80
           CidrIp: 0.0.0.0/0
-      Tags:
-        -Key: env
-         Value: dev
+      Tags: 
+        - Key: env
+          Value: dev
 
 
 Outputs:
