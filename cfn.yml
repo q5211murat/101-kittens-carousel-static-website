@@ -13,7 +13,7 @@ Resources:
         - !Ref MySecGrp
       Tags:
         - Key: Name
-          Value: !Sub Osvaldo ${AWS::StackName}
+          Value: !Sub murat ${AWS::StackName}
       UserData:
         Fn::Base64: |
           #! /bin/bash
