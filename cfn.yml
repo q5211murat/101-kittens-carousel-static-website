@@ -2,8 +2,6 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: |
   This my Cfn template for EC2 with Security Group
 
-Parameters: ParamName
-
 Resources:
   MyWebServer:
     Type: AWS::EC2::Instance
@@ -15,9 +13,9 @@ Resources:
         - !Ref MySecGrp
       Tags:
         - Key: Name
-          Value: !Sub murat ${AWS::StackName}
+          Value: !Sub Osvaldo ${AWS::StackName}
       UserData:
-        Fn::Base64:
+        Fn::Base64: |
           #! /bin/bash
           yum update -y
           yum install httpd -y
